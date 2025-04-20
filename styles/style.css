@@ -1,18 +1,17 @@
 
 .header {
   display: grid;
-  font-size: 18px;
-  width: 1100px;
-  height: 293px;
-  padding: 94px 50px 96px 50px;
   grid-template-columns: 1fr 136px 1fr;
+  width: 1100px;
+  padding: 94px 50px 91px 50px;
+  font-size: 18px;
 }
 
 .header__menu {
-  padding: 0;
   justify-items: start;
+  grid-column: 1 / 2;
   align-content: center;
-  grid-column: 1 2
+  padding: 0;
 }
 
 .header__links-list {
@@ -22,16 +21,16 @@
 }
 
 .header__links-list-item {
-  list-style: circle;
   text-underline-position: under;
+  list-style: circle;
 }
 
-.header__list-item_no-bullit {
+.header__links-list-item_no-bullit {
   list-style: none;
 }
 
-.header__link {
-  white-space: nowrap;
+.header__link_active {
+  text-decoration: none;
 }
 
 .header__link:hover {
@@ -39,22 +38,21 @@
 }
 
 .header__logo {
-  grid-column: 2 3;
+  grid-column: 2 / 3;
+  align-self: center;
+  justify-self: center;
 }
 
-.header__contacts {
-  padding-top: 5px;
+.header__address {
+  padding-top: 4px;
   padding-right: 36px;
 }
 
-.contacts {
-  justify-self: end;
-  text-underline-position: under;
-  grid-column: 3 4;
-  line-height: 24.5px;
-}
-
 .address {
+  grid-column: 3 / 4;
+  justify-self: end;
+  line-height: 24.5px;
+  text-underline-position: under;
   font-style: normal;
 }
 
@@ -62,32 +60,32 @@
   position: relative;
   padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0, 0.6);
-  z-index: 0;
 }
 
 .cover__title {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
   color: #fff;
   font-weight: bold;
   font-size: 100px;
-  text-transform: uppercase;
   line-height: 1.15;
   letter-spacing: 30px;
-  z-index: 1;
+  text-transform: uppercase;
 }
 
 .aligned-text {
@@ -99,13 +97,13 @@
   text-align: center;
 }
 
+.letter-spacing_extended {
+  letter-spacing: 60px;
+}
+
 .aligned-text_right {
   line-height: 1;
   text-align: right;
-}
-
-.letter-spacing_extended {
-  letter-spacing: 60px;
 }
 
 .remove-spacing {
@@ -114,33 +112,34 @@
 
 .cover__description {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
-  gap: 80px;
   align-items: center;
-  z-index: 1;
+  gap: 80px;
   padding: 135px 0 0 28px;
 }
 
 .cover__description-text {
   color: #fff;
-  font-size: 22px;
   font-weight: normal;
+  font-size: 22px;
   text-transform: uppercase;
   word-spacing: 18px;
 }
 
 .bet-button {
-  background-color: transparent;
   border: 1px solid #fff;
   padding: 12px 32px;
-  cursor: pointer;
   word-spacing: normal;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: Raleway, Arial, sans-serif;
 }
 
 .bet-button:hover {
-  background-color: #fff;
   color: #000;
+  background-color: #fff;
 }
 
 .lots {
@@ -155,17 +154,24 @@
 }
 
 .lots__card-list {
-  list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 1;
   gap: 25px;
-  padding: 28px 0 0 24px;
+  padding: 26px 0 0 24px;
+  list-style: none;
 }
 
 .lots__card-list-item {
   height: 100%;
+}
+
+.card_link {
+  z-index: 1;
+  display: block;
+  height: 100%;
+  text-decoration: none;
 }
 
 .card {
@@ -173,59 +179,48 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 334px;
   min-height: 563px;
+  padding: 50px 40px;
 } 
 
-.card_link {
-  display: block;
-  height: 100%;
-  z-index: 1;
-}
-
 .card__title {
+  z-index: 1;
   color: #fff;
+  font-size: 22px;
   text-decoration: underline;
   text-underline-position: under;
   text-transform: uppercase;
-  font-size: 22px;
-  z-index: 1;
 }
 
 .card__text {
+  z-index: 1;
   color: #fff;
   font-size: 20px;
-  z-index: 1;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .lots__look-more-link {
   display: block;
+  margin: 30px 64px;
+  font-size: 20px;
   text-decoration: underline;
   text-underline-position: under;
-  font-size: 20px;
-  padding: 30px 64px;
+  width: fit-content;
 }
 
 .lots__look-more-link:hover {
@@ -233,46 +228,47 @@
 }
 
 .about {
-  padding: 154px 71px;
   display: grid;
-  grid-template-columns: 0.9fr 1fr 1fr;
-}
-
-.about__column {
-  grid-column: 2/4;
-  justify-self: center;
-  padding-top: 5px;
+  grid-template-columns: 0.8fr 1fr 1fr;
+  padding: 150px 0 144px 71px;
 }
 
 .about__logo {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #000;
-  border-radius: 50%;
+  align-items: center;
   width: 240px;
   height: 240px;
+  border-radius: 50%;
+  background-color: #000;
 }
 
 .about__logo-image {
   width: 148px;
 }
 
+.about__column {
+  padding-left: 19px;
+  padding-right: 26px;
+  margin-top: 107px;
+  grid-column: 2 / 4;
+  justify-self: center;
+}
+
 .about__title {
-  padding: 100px 17px 103px;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
   text-transform: uppercase;
+  padding-bottom: 103px;
 }
 
 .about__text {
-  padding-left: 10px;
   display: flex;
   flex-direction: column;
   gap: 25px;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1.2;
 }
 
 .footer {
@@ -286,11 +282,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
   padding-left: 40px;
+  list-style: none;
+}
+
+.footer__menu-link {
+  text-underline-position: under;
 }
 
 .footer__menu-link:hover {
+  text-decoration: none;
+}
+
+.footer__menu-link_active {
   text-decoration: none;
 }
 

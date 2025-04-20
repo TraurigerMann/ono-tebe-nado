@@ -13,8 +13,8 @@
       <header class="header">
         <nav class="header__menu">
           <ul class="header__links-list">
-            <li class="header__links-list-item header__list-item_no-bullit">
-              <a class="header__link" href="#0">главная</a>
+            <li class="header__links-list-item header__links-list-item_no-bullit">
+              <a class="header__link header__link_active" href="#0">главная</a>
             </li>
             <li class="header__links-list-item">
               <a class="header__link" href="#0">посмотреть лоты</a>
@@ -24,29 +24,27 @@
             </li>
           </ul>
         </nav>
-        <a class="header__logo" href="#0">
+        <a class="header__logo">
           <img src="images/logo-black.svg" alt="Логотип аукциона 'Оно тебе надо'">
         </a>
-        <contacts class="header__contacts contacts">
-          <a href="tel:+9 999 555 5555">+9 999 555 5555</a>
+        <address class="header__address address">
+          <a href="tel:+99995555555">+9 999 555 5555</a>
           <br>
           <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          <address class="address">
-          наб. Принсенграхт 263-<br> 265, Амстердам
-          </address>
-        </contacts>
+          <p>наб. Принсенграхт 263-<br> 265, Амстердам</p>
+        </address>
       </header>
       <main>
         <section class="cover">
           <div class="overlay"></div>
-          <div class="cover__title">
+          <h1 class="cover__title">
             <span class="aligned-text">
               о<span class="letter-spacing_extended">но</span></span>
             <span class="aligned-text aligned-text_center">
               те<span class="letter-spacing_extended">бе</span></span> 
             <span class="aligned-text aligned-text_right">
               <span class="letter-spacing_extended">н</span>ад<span class="remove-spacing">о</span></span>
-          </div>
+          </h1>
           <div class="cover__description">
             <p class="cover__description-text">
               Аукцион вещей, в которые никто не верил
@@ -100,7 +98,7 @@
             </li>
           </ul>
           <a href="#0" class="lots__look-more-link">
-            <p>посмотреть больше</p>
+            посмотреть больше
           </a>
         </section>
         <section class="about">
@@ -112,37 +110,35 @@
             <div class="about__text">
               <p>
                 Здесь вы не встретите очередное пафосное собрание невероятно
-                дорогого антиквариата. Наши лоты вообще не должны были попасть ни
-                на один аукцион. Потому что кому нужен дневник девочки-подростка
-                или картина, которую может нарисовать даже ребёнок? Кому нужны все
-                эти странные вещи, созданные любителями?
+                дорогого антиквариата. Наши лоты вообще не должны были попасть
+                ни на один аукцион. Потому что кому нужен дневник девочки-
+                подростка или картина, которую может нарисовать даже ребёнок? 
+                Кому нужны все эти странные вещи, созданные любителями?
               </p>
               <p>
-                Слишком сложные или, наоборот, слишком простые. Опережающие своё
-                время. В пух и прах растерзанные критиками. Непринятые и
-                непонятые. Когда-то они казались просто неудачными. Но, несмотря
-                на критику, кажущуюся простоту или сложность, сейчас без этих
-                лотов невозможно представить современную культуру. Когда в эти
-                вещи не верил никто, продолжали верить их создатели. И сейчас эти
-                лоты стали культовыми.
+                Слишком сложные или, наоборот, слишком простые. Опережающие 
+                своё время. В пух и прах растерзанные критиками. Непринятые и
+                непонятые. Когда-то они казались просто неудачными. Но, несмотря на
+                критику, кажущуюся простоту или сложность, сейчас без этих лотов
+                невозможно представить современную культуру. Когда в эти вещи не 
+                верил никто, продолжали верить их создатели. И сейчас эти лоты
+                стали культовыми.
               </p>
             </div>
           </div>
         </section>
       </main> 
       <footer class="footer">
-        <contacts class="contacts">
-          <a href="tel:+9 999 555 5555">+9 999 555 5555</a>
+        <address class="address">
+          <a href="tel:+99995555555">+9 999 555 5555</a>
           <br>
           <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-          <address class="address">
-          наб. Принсенграхт 263-<br> 265, Амстердам
-          </address>
-        </contacts>
+          <p>наб. Принсенграхт 263-<br> 265, Амстердам</p>
+        </address>
         <nav>
           <ul class="footer__menu-list">
             <li>
-              <a class="footer__menu-link" href="#0">главная</a>
+              <a class="footer__menu-link footer__menu-link_active" href="#0">главная</a>
             </li>
             <li>
               <a class="footer__menu-link" href="#0">посмотреть лоты</a>
@@ -155,17 +151,32 @@
         <ul class="footer__social-list">
           <li>
             <a href="https://youtube.com/">
-              <img class="footer__social-icon" src="images/yt.svg" alt="YouTube">
+              <img 
+                class="footer__social-icon" 
+                src="images/yt.svg" 
+                target="_blank"
+                rel="noopener noreferrer" 
+                alt="YouTube">
             </a>
           </li>
           <li>
             <a href="https://vk.com/">
-              <img class="footer__social-icon" src="images/vk.svg" alt="VK">
+              <img 
+                class="footer__social-icon" 
+                src="images/vk.svg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                alt="VK">
             </a>
           </li>
           <li>
             <a href="https://ru.pinterest.com/">
-              <img class="footer__social-icon" src="images/pinterest.svg" alt="Pinterest">
+              <img 
+                class="footer__social-icon" 
+                src="images/pinterest.svg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                alt="Pinterest">
             </a>
           </li>
         </ul>
